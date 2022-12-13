@@ -15,6 +15,8 @@ My First build of DWM!
  - Vanitygaps
  - Alpha patch + pywal.
  - Use slstatus to show system status on top bar.
+ - terminal scrolling
+ - (check) multimedia keys support.
 
  ## Roadmap
  - Change and Configure appropriate keybinds
@@ -26,4 +28,5 @@ My First build of DWM!
  ## Installation
  - Build these from source dwm > dmenu > st > slstatus
  - Move .xprofile to your home directory.
+ 
  
