@@ -1,0 +1,3 @@
+xwallpaper --zoom ~/wallpapers/forest.jpg
+wal -R
+dwmblocks &
