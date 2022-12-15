@@ -3,12 +3,16 @@ My First build of DWM!
 
 ## Dependencies
  - Xlib headers (find all these).
+ - xorg libraries (startx
  - Alsamixer
  - xwallpaper
  - picom / another composite manager
- - pywal
+ - pywal < imagemagick < setuptools, poetry > pip > python
+ - brightnessctl
  
  # Features / Keybinds
+ - ranger
+ - 
  - Resize tiles w/h
  - Cool Autostart.
  - Pywal to change colour scheme dynamically.
