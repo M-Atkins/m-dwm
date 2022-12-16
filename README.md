@@ -24,6 +24,8 @@ My First build of DWM!
  - at some point look at DWM blocks
  - figure out why DWM crashes on random github pages.
  - Run this on arch.
+ - Create Dependency installer script?
+ - Create build installer script
  
  ## Installation
  - Build these from source dwm > dmenu > st > slstatus

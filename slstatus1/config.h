@@ -67,8 +67,9 @@ static const struct arg args[] = {
 	/* function format          argument */
 	//{ datetime, "%s",           "%F %T" },
 	//{ wifi_perc, "W: (%3s%% on ", "wlp8s0" },
-	{ run_command, "[vol: %s] ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
-	{ run_command, "[bri: %s%%] ", "brightnessctl -m -d intel_backlight | awk -F, '{print substr($4, 0, length($4)-1)}'"}, 
+	/*{ run_command, "[vol: %s] ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },*/
+	{ run_command, "[bri: %s%%] ", "brightnessctl -m -d intel_backlight | awk -F, '{print substr($4, 0, length($4)-1)}'"},
+	{ run_command, "[vol: %s%%]", "pulsemixer --get-volume | awk '{print $1}'"},
 	{ battery_perc, "[bat: %s%%", "BAT0"},
 	{ battery_state, "%s] ", "BAT0"},
 	{ battery_remaining, "[%s] ", "BAT0"},

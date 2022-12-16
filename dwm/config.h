@@ -62,10 +62,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 /* volume keys*/
-static const char *upvol[] = { "/usr/bin/amixer", "set", "Master", "5%+", NULL };
-static const char *downvol[] = { "/usr/bin/amixer", "set", "Master", "5%-", NULL };
-static const char *mutevol[] = { "/usr/bin/amixer", "set", "Master", "0%+", NULL };
-
+static const char *upvol[] =   { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%",     NULL };
+static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%",     NULL  };
+static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle",     NULL  };
+static const char *playpause[] = {"playerctl", "play-pause", NULL};
 
 /* light keys */
 static const char *brupcmd[] = { "brightnessctl", "set", "2%+", NULL };
@@ -168,6 +168,7 @@ static const Key keys[] = {
 	{ 0,                       	XF86XK_AudioRaiseVolume, 	spawn, {.v = upvol   } },
 	{ 0,			   	XF86XK_MonBrightnessUp,		spawn,	{.v = brupcmd }  },
 	{ 0,			   	XF86XK_MonBrightnessDown,	spawn,	{.v = brdowncmd }  },
+	{ 0,			   	XF86XK_AudioPlay,		spawn,	{.v = playpause }  },
 	{ 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
 	{ 0, XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
 	/*regular keybinds multimedia support*/
