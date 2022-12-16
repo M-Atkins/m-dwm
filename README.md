@@ -1,14 +1,22 @@
 # DWM Build 1.0
 My First build of DWM! 
 
-## Dependencies
+ ## Dependencies
  - Xlib headers (find all these).
+ - xorg libraries (startx
  - Alsamixer
  - xwallpaper
  - picom / another composite manager
- - pywal
+ - pywal < imagemagick < setuptools, poetry > pip > python
+ - brightnessctl
  
+<<<<<<< HEAD
  ## Features / Keybinds
+=======
+ # Features / Keybinds
+ - ranger
+ - 
+>>>>>>> refs/remotes/origin/main
  - Resize tiles w/h
  - Cool Autostart.
  - Pywal to change colour scheme dynamically.
@@ -34,3 +42,6 @@ My First build of DWM!
  ## Dependencies
  - playerctl 
  - pulsemixer (with pulseaudio)
+
+ ## Extra dls
+ - Bluetuith for connecting bluetooth devices. 
