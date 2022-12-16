@@ -8,7 +8,7 @@ My First build of DWM!
  - picom / another composite manager
  - pywal
  
- # Features / Keybinds
+ ## Features / Keybinds
  - Resize tiles w/h
  - Cool Autostart.
  - Pywal to change colour scheme dynamically.
@@ -31,4 +31,6 @@ My First build of DWM!
  - Build these from source dwm > dmenu > st > slstatus
  - Move .xprofile to your home directory.
  
- 
+ ## Dependencies
+ - playerctl 
+ - pulsemixer (with pulseaudio)
