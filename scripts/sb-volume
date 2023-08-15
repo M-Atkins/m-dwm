@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# Prints the current volume or 🔇 if muted.
+#!/bin/sh
+
+# Prints the current volume or 🔇 if muted.
+
+case $BLOCK_BUTTON in
+	1) st -t stfloat -g 100x15+500 -e pulsemixer;;
+	2) pactl set-sink-mute @DEFAULT_SINK@ toggle;;
+	4) pactl -- set-sink-volume @DEFAULT_SINK@ +1%;;
+	5) pactl -- set-sink-volume @DEFAULT_SINK@ -1%;;
+	3) st -t stfloat -g 100x15+500 -e bluetuith;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+vol="$(pulsemixer --get-volume | awk '{print $1}')"
+
+# If muted, print 🔇 and exit.
+[ "$vol" != "${vol%\[MUTED\]}" ] && echo --% && exit
+
+vol="${vol#Volume: }"
+
+split() {
+	# For ommiting the . without calling and external program.
+	IFS=$2
+	set -- $1
+	printf '%s' "$@"
+}
+
+vol="$(printf "%.0f" "$(split "$vol" ".")")"
+#
+#case 1 in
+#	$((vol >= 70)) ) icon="🔊" ;;
+#	$((vol >= 30)) ) icon="🔉" ;;
+#	$((vol >= 1)) ) icon="🔈" ;;
+#	* ) echo 🔇 && exit ;;
+#esac
+#echo "$icon$vol%"
+
+#echo "$vol%"
+
+#echo "$vol"%
+echo 🔊"$vol"%

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+function redtoggle() {
+  set -eu
+  if ! pkill -x -SIGUSR1 redshift; then
+    echo 'Could not find redshift process to toggle.' >&2
+    exit 1
+  fi
+}
+
+case $BLOCK_BUTTON in
+  1) st -t stfloat -g 50x20+1300 -e calcurse;; 
+  #3) redtoggle && notify-send "redshift toggled";;
+  3) redtoggle && notify-send "redshift toggled";;
+esac
+
+clock="$(date '+%b %d (%a) ⏰%I:%M%p')"
+echo 📅"$clock"
+

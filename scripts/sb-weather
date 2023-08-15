@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case "$BLOCK_BUTTON" in
+    #1) notify-send "test";; 
+esac
+
+#curl wttr.in/Norwich?format=3 | awk '{print $NF}'
+
+#curl wttr.in/Norwich?format=3 | awk '{print $NF}'
+var=$(curl -s wttr.in/Norwich?format=3 | awk '{print $NF}')
+
+if [ ${#var} > 6  ]
+  then
+	echo ""
+else
+	echo "🌥️"$var""
+fi

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+state=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk 'NR == 12 {print $2}')
+if [ "$state" == "charging" ]
+then
+  state="+"
+else
+  state="-"
+fi
+
+bat="$(cat /sys/class/power_supply/BAT0/capacity)"
+#echo b:"$bat"%
+echo 🔋"$bat"%"$state"
+

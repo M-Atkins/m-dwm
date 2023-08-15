@@ -1,0 +1,9 @@
+#!/bin/bash
+usedmem=$(free | awk 'NR==2 {print $3}')
+freemem=$(free | awk 'NR==2 {print $4}')
+
+totalmem=$(free | awk 'NR==2 {print $2}')
+percentage=$(awk "BEGIN {printf \"%.2f\", ($usedmem / $totalmem) * 100}")
+trimmed_percentage=${percentage::-3}  # Remove last three letters from the variable
+
+echo 🧠"$trimmed_percentage%"

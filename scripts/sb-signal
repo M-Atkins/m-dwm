@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sig=$(awk 'NR==3 { print substr($3, 1, length($3)-1) "%" }' /proc/net/wireless)
+interface=$(iw dev wlan0 link | awk '/SSID/{print $2}')
+maxlen=5
+if [ ${#interface} > $maxlen ]
+then
+  interface=$(echo "$interface" | cut -c 1-"$maxlen")
+fi
+
+echo 🔗"$sig" "$interface"..
