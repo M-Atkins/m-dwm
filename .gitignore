@@ -1,5 +1,6 @@
-/xmenu
-/st-0.9.bak
-/backups
+/xmenu/
+/st-0.9.bak/
+/backups/
 /tabbed-0.7/
 *.tar.gz
+*.bak
