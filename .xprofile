@@ -1,0 +1,20 @@
+export PATH="/home/matt/.local/bin/statusbar:$PATH"
+#xwallpaper --zoom ~/m-dwm/wallpapers/nycskyline.jpg
+wal -R -n
+
+xwallpaper --zoom ~/Newdwm/wallpapers/forest.png
+
+alias nsxiv='nsxiv-rifle'
+picom &
+
+
+nvidia-settings --assign CurrentMetaMode="DVI-D-0:1920x1080_60 +0+0 { ForceFullCompositionPipeline = On }, HDMI-0: 1920x1080_60 +1920+0 { ForceFullCompositionPipeline = On }"
+
+xrandr --output DVI-D-0 --primary
+
+redshift -l 51.5072:0.1276 &
+xdotool mousemove 960 540
+dwmblocks &
+
+export GTK_THEME=Adwaita:dark
+
