@@ -1,9 +1,12 @@
 #!/bin/sh
 
+#case "$BLOCK_BUTTON" in
+    #1) shutdown now;;
+    #3) reboot ;;
+    #2) slock ;;
+#esac
 case "$BLOCK_BUTTON" in
-    1) poweroff;;
-    3) reboot ;;
-    2) slock ;;
+    1) st -t stfloat -g 30x15+800 -e powerprompt;;
 esac
 
 echo "⏻ " 

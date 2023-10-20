@@ -1,14 +1,11 @@
 #!/bin/bash
 
 case "$BLOCK_BUTTON" in
-    #1) notify-send "test";; 
+    1) #st -t stfloat -g 100x15+500 -e curl wttr.in/Norwich?format=3;; 
 esac
 
-var=$(curl -s wttr.in/CITY?format=3 | awk '{print $NF}')
+#curl wttr.in/Norwich?format=3 | awk '{print $NF}'
 
-if [ ${#var} > 6  ]
-  then
-	echo ""
-else
-	echo "🌥️"$var""
-fi
+#curl wttr.in/Norwich?format=3 | awk '{print $NF}'
+var=$(curl wttr.in/Norwich?format=3 | awk '{print $NF}')
+echo "🌥️"$var""
