@@ -136,6 +136,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+  { MODKEY|Mod4Mask|ControlMask,  XK_comma,  tagswapmon,     {.i = +1 } },
+	{ MODKEY|Mod4Mask|ControlMask,  XK_period, tagswapmon,     {.i = -1 } },
 	{ MODKEY,                       XK_s,      show,           {0} },
 	{ MODKEY|ShiftMask,             XK_s,      showall,        {0} },
 	{ MODKEY,                       XK_h,      hide,           {0} },
@@ -148,7 +150,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ShiftMask,             XK_q,      quitprompt,           {0} },
 };
 
 /* button definitions */
